@@ -7,9 +7,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("[1] Novo   \n[4] Entrada Estoque");
-            System.out.println("[2] Listar Produtos  \n[5] Saída Estoque");
-            System.out.println("[3] Remover Produtos  \n[0] Sair");
+            System.out.println(" \n --MENU INICIAL--");
+            System.out.println("[1] Novo   \n[2] Listar Produtos");
+            System.out.println("[3] Remover Produtos  \n[4] Entrada Estoque");
+            System.out.println("[5] Saída Estoque  \n[0] Sair");
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
             scanner.nextLine();

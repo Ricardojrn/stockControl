@@ -70,7 +70,6 @@ public class Medicamento {
     public void removerEstoque(int quantidade){
         if (quantidade <= this.quantidadeEstoque) {
             this.quantidadeEstoque -= quantidade;
-            System.out.println("Saída de estoque realizada com sucesso.");
         }else {
             System.out.println("Quantidade insuficiente em estoque");
         }
@@ -78,6 +77,6 @@ public class Medicamento {
 
     @Override
     public String toString(){
-        return "medicamento: "+ nome + " " + concentracao + " | " + preco + "R$ | estoque: " + quantidadeEstoque;
+        return "medicamento: "+ nome + " " + concentracao + " | preço: " + preco + "R$ | estoque: " + quantidadeEstoque;
     }
 }

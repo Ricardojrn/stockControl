@@ -46,6 +46,7 @@ public class Estoque {
         Medicamento medicamento = encontrarMedicamento(nome);
         if (medicamento != null) {
             medicamento.removerEstoque(quantidade);
+            System.out.println("Saída de estoque realizada com sucesso.");
         } else {
             System.out.println("Medicamento não encontrado.");
         }
