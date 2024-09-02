@@ -36,11 +36,13 @@ public class Main {
                     estoque.listarMedicamentos();
                     break;
                 case 3:
+                    estoque.listarMedicamentos();
                     System.out.print("Nome do medicamento a remover: ");
                     String nomeRemover = scanner.nextLine();
                     estoque.removerMedicamento(nomeRemover);
                     break;
                 case 4:
+                    estoque.listarMedicamentos();
                     System.out.print("Nome do medicamento: ");
                     String nomeEntrada = scanner.nextLine();
                     System.out.print("Quantidade a adicionar: ");
@@ -48,6 +50,7 @@ public class Main {
                     estoque.entradaEstoque(nomeEntrada, quantidadeEntrada);
                     break;
                 case 5:
+                    estoque.listarMedicamentos();
                     System.out.print("Nome do medicamento: ");
                     String nomeSaida = scanner.nextLine();
                     System.out.print("Quantidade a remover: ");

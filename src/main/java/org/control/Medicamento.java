@@ -23,60 +23,16 @@ public class Medicamento {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getApresentacao() {
-        return apresentacao;
-    }
-
-    public void setApresentacao(String apresentacao) {
-        this.apresentacao = apresentacao;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public String getConcentracao() {
-        return concentracao;
-    }
-
-    public void setConcentracao(String concentracao) {
-        this.concentracao = concentracao;
-    }
-
-    public String getLaboratorio() {
-        return laboratorio;
-    }
-
-    public void setLaboratorio(String laboratorio) {
-        this.laboratorio = laboratorio;
-    }
-
     public int getQuantidadeEstoque() {
         return quantidadeEstoque;
     }
 
-    public void adicionarEstoque(int quantidade) {
-        this.quantidadeEstoque += quantidade;
-    }
-
-    public void removerEstoque(int quantidade){
-        if (quantidade <= this.quantidadeEstoque) {
-            this.quantidadeEstoque -= quantidade;
-        }else {
-            System.out.println("Quantidade insuficiente em estoque");
-        }
+    public void setQuantidadeEstoque(int quantidade) {
+        this.quantidadeEstoque = quantidade;
     }
 
     @Override
     public String toString(){
-        return "medicamento: "+ nome + " " + concentracao + " | preço: " + preco + "R$ | estoque: " + quantidadeEstoque;
+        return "medicamento: "+ nome + " " + concentracao + " | Laboratório: "+ laboratorio+ " | preço: " + preco + " R$ | estoque: " + quantidadeEstoque;
     }
 }

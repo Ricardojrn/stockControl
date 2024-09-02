@@ -35,7 +35,8 @@ public class Estoque {
     public void entradaEstoque(String nome, int quantidade) {
         Medicamento medicamento = encontrarMedicamento(nome);
         if (medicamento != null) {
-            medicamento.adicionarEstoque(quantidade);
+            int novaQuantidade = medicamento.getQuantidadeEstoque() + quantidade;
+            medicamento.setQuantidadeEstoque(novaQuantidade);
             System.out.println("Entrada de estoque realizada com sucesso.");
         } else {
             System.out.println("Medicamento não encontrado.");
@@ -45,8 +46,13 @@ public class Estoque {
     public void saidaEstoque(String nome, int quantidade) {
         Medicamento medicamento = encontrarMedicamento(nome);
         if (medicamento != null) {
-            medicamento.removerEstoque(quantidade);
-            System.out.println("Saída de estoque realizada com sucesso.");
+            if (quantidade <= medicamento.getQuantidadeEstoque()) {
+                int novaQuantidade = medicamento.getQuantidadeEstoque() - quantidade;
+                medicamento.setQuantidadeEstoque(novaQuantidade);
+                System.out.println("Saída de estoque realizada com sucesso.");
+            } else {
+                System.out.println("Quantidade insuficiente em estoque.");
+            }
         } else {
             System.out.println("Medicamento não encontrado.");
         }
